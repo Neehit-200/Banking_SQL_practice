@@ -1,3 +1,4 @@
+
 select * from accounts;
 select * from branches;
 select * from customers;
@@ -54,3 +55,31 @@ else "low balance account"
 end as cat
 from accounts;
 
+
+select * from accounts;
+
+select account_type,count(acc_id) as cnt
+from accounts
+group by account_type
+having cnt>5;
+
+select * from customers;
+select * from loans;
+select * from branches;
+
+select upper(firstname) from customers;
+select lower(firstname) from customers;
+select concat(firstname,"-",lastname) from customers;
+
+
+select * from loans;
+select round(interest_rate) from loans;
+select ceil(interest_rate) from loans;
+select floor(interest_rate) from loans;
+
+select mod(25,4);
+
+
+select current_date();
+select current_time();
+select now();
